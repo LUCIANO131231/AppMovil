@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Proyecto U+</string>
+    <string name="nav_crear_proyectos">Crear Proyectos</string>
+    <string name="nav_asignar_tareas">Asignar Tareas</string>
+    <string name="nav_seguimiento">Seguimiento del Progreso</string>
+    <string name="nav_calendario_reuniones">Calendario Reuniones</string>
+    <string name="nav_compartir_archivos">Compartir Archivos</string>
+</resources>

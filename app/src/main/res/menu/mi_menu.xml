@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_crear_proyectos"
+        android:title="@string/nav_crear_proyectos" />
+    <item
+        android:id="@+id/nav_asignar_tareas"
+        android:title="@string/nav_asignar_tareas" />
+    <item
+        android:id="@+id/nav_seguimiento"
+        android:title="@string/nav_seguimiento" />
+    <item
+        android:id="@+id/nav_calendario_reuniones"
+        android:title="@string/nav_calendario_reuniones" />
+    <item
+        android:id="@+id/nav_compartir_archivos"
+        android:title="@string/nav_compartir_archivos" />
+</menu>
