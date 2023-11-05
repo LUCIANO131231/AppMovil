@@ -3,16 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
     tools:context=".ActivityIniciarSesion">
+
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="194dp"
-        android:layout_height="159dp"
-        android:layout_marginTop="168dp"
+        android:layout_width="247dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="128dp"
         android:src="@drawable/logis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -21,87 +22,101 @@
 
     <TextView
         android:id="@+id/tvApp"
-        android:layout_width="332dp"
-        android:layout_height="88dp"
+        android:layout_width="298dp"
+        android:layout_height="78dp"
         android:drawableLeft="@drawable/baseline_supervised_user_circle_24"
-        android:drawablePadding="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Proyectos U+"
         android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:text="Proyecto U+"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageLogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.418" />
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="0dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:drawableStart="@drawable/baseline_email_24"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="Ingrese su correo electronico"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@android:color/white"
+        android:layout_marginTop="36dp"
+        android:hint="Ingrese su correo electrónico"
+        app:hintEnabled="true"
+        app:startIconDrawable="@drawable/baseline_email_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="20dp"
-        android:ems="10"
+        android:layout_marginTop="44dp"
         android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@id/etEmail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/etEmail"
-        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+        app:startIconDrawable="@drawable/baseline_password_24"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvRestablecerPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:text="¿Olvidaste tu contraseña?"
         android:textColor="@color/design_default_color_primary"
-        app:layout_constraintEnd_toEndOf="@id/etPassword"
-        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
 
     <Button
         android:id="@+id/btLogin"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="84dp"
         android:text="Iniciar sesión"
-        app:layout_constraintEnd_toEndOf="@id/etPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
-        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+        app:icon="@drawable/baseline_logout_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
 
     <Button
         android:id="@+id/btRegister"
-        android:layout_width="0dp"
+        android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="10dp"
         android:text="Registrarme"
-        app:layout_constraintEnd_toEndOf="@id/btLogin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/btLogin"
-        app:layout_constraintTop_toBottomOf="@id/btLogin" />
+        app:icon="@drawable/baseline_app_registration_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btLogin"
+        app:layout_constraintVertical_bias="0.078" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

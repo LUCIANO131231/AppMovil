@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, ActivityCrearProyectos.class));
             return true;
         }
+
+        if (item.getItemId() == R.id.nav_asignar_tareas) {
+            Intent intent = new Intent(MainActivity.this, ActivityAsignarTarea.class);
+            startActivity(intent);
+            return true;
+        }
+        
         return super.onOptionsItemSelected(item);
     }
 }

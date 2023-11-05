@@ -9,93 +9,111 @@
     android:padding="16dp"
     tools:context=".ActivityRegistro">
 
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="10dp"
-        android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textColorHint="@android:color/white"
+        android:hint="Ingrese su correo electrónico"
+        app:hintEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        app:startIconDrawable="@drawable/baseline_email_24">
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/baseline_drive_file_rename_outline_24"
-        android:drawablePadding="10dp"
-        android:hint="Ingrese sus nombres completos"
-        android:inputType="textPersonName"
-        android:padding="16dp"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:drawableStart="@drawable/baseline_email_24"
-        android:drawablePadding="10dp"
-        android:hint="Ingrese su correo electrónico"
-        android:inputType="textEmailAddress"
-        android:padding="16dp"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Ingrese su contraseña"
+        app:startIconDrawable="@drawable/baseline_password_24"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+       <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Ingrese sus nombres completos"
+            app:hintEnabled="true"
+            app:startIconDrawable="@drawable/baseline_drive_file_rename_outline_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutLastName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Ingrese sus apellidos completos"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutName"
+        app:startIconDrawable="@drawable/baseline_drive_file_rename_outline_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="314dp"
-        android:layout_height="181dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="166dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/registro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etLastName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/baseline_drive_file_rename_outline_24"
-        android:drawablePadding="10dp"
-        android:hint="Ingrese sus apellidos completos"
-        android:inputType="textPersonName"
-        android:padding="16dp"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btRegister"
-        android:layout_width="240dp"
+        android:layout_width="158dp"
         android:layout_height="40dp"
         android:text="Registrarse"
-        app:icon="@drawable/baseline_app_registration_24"
+        app:icon="@drawable/baseline_logout_24"
         app:iconGravity="textStart"
         app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintTop_toBottomOf="@+id/layoutLastName"
+        app:layout_constraintVertical_bias="0.32" />
 </androidx.constraintlayout.widget.ConstraintLayout>
