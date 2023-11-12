@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Tarea04"
         tools:targetApi="31">
         <activity
+            android:name=".MostrarDatosProyecto"
+            android:exported="false" />
+        <activity
+            android:name=".MostrarDatosCalendario"
+            android:exported="false" />
+        <activity
+            android:name=".MostrarDatosTarea"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySeguimientoProgresoTareas"
+            android:exported="false" />
+        <activity
             android:name=".ActivityRestablecerContrasena"
             android:exported="false" />
         <activity

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto U+</string>
+    <string name="app_name">Espacio de trabajo</string>
     <string name="nav_crear_proyectos">Crear Proyectos</string>
     <string name="nav_asignar_tareas">Asignar Tareas</string>
     <string name="nav_seguimiento">Seguimiento del Progreso</string>
@@ -10,5 +10,15 @@
         <item>Alta</item>
         <item>Media</item>
         <item>Baja</item>
+    </string-array>
+
+    <string name="actualizar_progreso">Actualizar progreso</string>
+
+    <string-array name="estados_proyecto">
+        <item>En Progreso</item>
+        <item>Pendiente</item>
+        <item>Completado</item>
+        <item>Detenido</item>
+        <item>Cancelado</item>
     </string-array>
 </resources>

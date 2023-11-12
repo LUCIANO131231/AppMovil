@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,86 +9,90 @@
     tools:context=".ActivityAsignarTarea">
 
   <include
-      android:id="@+id/myToolbar"
-      layout="@layout/my_toolbar" />
+      android:id="@+id/toolbarAsignarTarea"
+      layout="@layout/my_toolbar"/>
 
   <EditText
-      android:id="@+id/etTitulo"
-      android:layout_width="0dp"
+      android:id="@+id/etTareaTitulo"
+      android:layout_width="280dp"
       android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="16dp"
-      android:hint="Ingresa el titulo"
+      android:layout_marginTop="104dp"
+      android:hint="Título de la tarea"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/myToolbar" />
+      app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
-      android:id="@+id/etDescripcion"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:hint="Ingresa la descripcion"
-      android:inputType="textMultiLine"
-      app:layout_constraintEnd_toEndOf="@id/etTitulo"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@id/etTitulo"
-      app:layout_constraintTop_toBottomOf="@id/etTitulo" />
-
-  <EditText
-      android:id="@+id/etFechaInicio"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:hint="Ingrese la fecha de inicio"
-      android:focusable="false"
-      android:clickable="true"
-      app:layout_constraintTop_toBottomOf="@id/etDescripcion"
-      app:layout_constraintStart_toStartOf="@id/etDescripcion"
-      app:layout_constraintEnd_toEndOf="@id/etDescripcion" />
-
-  <EditText
-      android:id="@+id/etFechaFinal"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:hint="Ingrese la fecha de fin"
-      android:focusable="false"
-      android:clickable="true"
-      app:layout_constraintTop_toBottomOf="@id/etFechaInicio"
-      app:layout_constraintStart_toStartOf="@id/etFechaInicio"
-      app:layout_constraintEnd_toEndOf="@id/etFechaInicio" />
-
-  <Spinner
-      android:id="@+id/spPrioridad"
-      android:layout_width="230dp"
-      android:layout_height="38dp"
-      android:layout_marginTop="20dp"
-      android:entries="@array/prioridad_array"
-      app:layout_constraintEnd_toEndOf="@id/etFechaFinal"
-      app:layout_constraintStart_toStartOf="@id/etFechaFinal"
-      app:layout_constraintTop_toBottomOf="@id/etFechaFinal" />
-
-  <Button
-      android:id="@+id/btnAsignar"
-      android:layout_width="wrap_content"
+      android:id="@+id/etTareaDescripcion"
+      android:layout_width="280dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
+      android:hint="Descripción de la tarea"
+      android:inputType="textMultiLine"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etTareaTitulo" />
+
+
+  <EditText
+      android:id="@+id/etTareaFechaVencimiento"
+      android:layout_width="280dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:clickable="true"
+      android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+      android:focusable="false"
+      android:hint="Fecha de vencimiento"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etTareaDescripcion" />
+
+  <Spinner
+      android:id="@+id/spinnerPrioridad"
+      android:layout_width="210dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:entries="@array/prioridad_array"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etTareaFechaVencimiento" />
+
+  <MultiAutoCompleteTextView
+      android:id="@+id/multiAutoCompleteMiembrosEquipo"
+      android:layout_width="280dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:hint="Miembros del equipo"
+      android:inputType="text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/spinnerPrioridad" />
+
+  <Button
+      android:id="@+id/btnAsignarTarea"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
       android:text="Asignar Tarea"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/spPrioridad" />
+      app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteMiembrosEquipo" />
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rvTareas"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
+  <!--androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvTareasAsignadas"
+      android:layout_width="413dp"
+      android:layout_height="82dp"
       android:layout_marginTop="16dp"
-      app:layout_constraintTop_toBottomOf="@id/btnAsignar"
       app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/btnAsignarTarea"
+      app:layout_constraintVertical_bias="0.651" /-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

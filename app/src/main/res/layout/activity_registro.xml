@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/white"
     android:padding="16dp"
     tools:context=".ActivityRegistro">
 
@@ -95,19 +95,37 @@
         android:id="@+id/imageLogo"
         android:layout_width="166dp"
         android:layout_height="168dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/registro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvApp"
+        android:layout_width="176dp"
+        android:layout_height="39dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Proyecto U+"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layoutEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btRegister"
         android:layout_width="158dp"
         android:layout_height="40dp"
-        android:text="Registrarse"
-        app:icon="@drawable/baseline_logout_24"
+        android:text="Registrarme"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/blue"
         app:iconGravity="textStart"
         app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

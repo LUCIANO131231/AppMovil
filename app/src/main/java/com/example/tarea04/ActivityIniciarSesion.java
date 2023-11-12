@@ -11,17 +11,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ActivityIniciarSesion extends AppCompatActivity {
-
     TextView tvRestablecerPassword;
     EditText etEmail, etPassword;
     Button btLogin, btRegister;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
-
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btLogin = findViewById(R.id.btLogin);
@@ -40,7 +37,6 @@ public class ActivityIniciarSesion extends AppCompatActivity {
             public void onClick(View view) {
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
-
                 if (email.isEmpty()) {
                     etEmail.setError("Ingrese su correo por favor!");
                     return;

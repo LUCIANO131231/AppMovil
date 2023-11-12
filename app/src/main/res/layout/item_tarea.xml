@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/tvTituloTarea"
+        android:id="@+id/tvTareaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Título de la Tarea"
         android:textSize="18sp"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="4dp"
+        android:text="Título de la tarea" />
 
     <TextView
-        android:id="@+id/tvDescripcionTarea"
+        android:id="@+id/tvTareaDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descripción de la Tarea"
-        android:textSize="14sp"/>
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"
+        android:text="Descripción de la tarea" />
+
+    <TextView
+        android:id="@+id/tvTareaFechaVencimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        android:text="Fecha de vencimiento" />
+
+    <TextView
+        android:id="@+id/tvTareaPrioridad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        android:text="Prioridad" />
+
+    <TextView
+        android:id="@+id/tvTareaMiembrosEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Miembros del equipo asignados" />
+
 </LinearLayout>

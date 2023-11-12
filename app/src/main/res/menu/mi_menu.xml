@@ -1,4 +1,5 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/nav_crear_proyectos"
         android:title="@string/nav_crear_proyectos" />
@@ -14,4 +15,16 @@
     <item
         android:id="@+id/nav_compartir_archivos"
         android:title="@string/nav_compartir_archivos" />
+    <item
+        android:id="@+id/buscar"
+        android:title="Buscar"
+        android:icon="@drawable/baseline_search_24"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+    <item
+        android:id="@+id/notificacion"
+        android:title="Notificaciones"
+        android:icon="@drawable/baseline_notifications_24"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
 </menu>

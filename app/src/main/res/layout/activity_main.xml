@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-  <include
-      android:id = "@+id/myToolbar"
-      layout="@layout/my_toolbar"
-      />
+  <include android:id = "@+id/myToolbar" layout="@layout/my_toolbar"/>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
