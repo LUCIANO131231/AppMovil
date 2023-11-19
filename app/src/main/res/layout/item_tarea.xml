@@ -10,39 +10,23 @@
         android:id="@+id/tvTareaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginBottom="4dp"
-        android:text="Título de la tarea" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvTareaDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"
-        android:text="Descripción de la tarea" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvTareaFechaVencimiento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:layout_marginBottom="4dp"
-        android:text="Fecha de vencimiento" />
-
-    <TextView
-        android:id="@+id/tvTareaPrioridad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:layout_marginBottom="4dp"
-        android:text="Prioridad" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvTareaMiembrosEquipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="Miembros del equipo asignados" />
-
+        android:textSize="20sp"/>
 </LinearLayout>

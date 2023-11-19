@@ -5,94 +5,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey"
     tools:context=".ActivityAsignarTarea">
 
   <include
       android:id="@+id/toolbarAsignarTarea"
-      layout="@layout/my_toolbar"/>
+      layout="@layout/nav_toolbar"/>
 
-  <EditText
-      android:id="@+id/etTareaTitulo"
-      android:layout_width="280dp"
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilTitulo"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="350dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="104dp"
-      android:hint="Título de la tarea"
+      android:layout_marginTop="44dp"
+      android:hint="Título para la tarea"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintHorizontal_bias="0.491"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/toolbarAsignarTarea">
 
-  <EditText
-      android:id="@+id/etTareaDescripcion"
-      android:layout_width="280dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTareaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilDescripcion"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="350dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
       android:hint="Descripción de la tarea"
-      android:inputType="textMultiLine"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintHorizontal_bias="0.491"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etTareaTitulo" />
+      app:layout_constraintTop_toBottomOf="@+id/tilTitulo">
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTareaDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+  </com.google.android.material.textfield.TextInputLayout>
 
-  <EditText
-      android:id="@+id/etTareaFechaVencimiento"
-      android:layout_width="280dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="40dp"
-      android:clickable="true"
-      android:drawableEnd="@android:drawable/ic_menu_my_calendar"
-      android:focusable="false"
-      android:hint="Fecha de vencimiento"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.496"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etTareaDescripcion" />
-
-  <Spinner
-      android:id="@+id/spinnerPrioridad"
-      android:layout_width="210dp"
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilMiembrosEquipo"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="350dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
-      android:entries="@array/prioridad_array"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.491"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tilDescripcion">
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/AutocompletarMiembros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Miembros del equipo"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <Button
+      android:id="@+id/btnCargarArchivo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="44dp"
+      android:background="?android:attr/selectableItemBackground"
+      android:drawableLeft="@drawable/baseline_file_upload_24"
+      android:text="Subir archivo"
+      android:textColor="#888787"
+      android:textSize="17sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etTareaFechaVencimiento" />
+      app:layout_constraintTop_toBottomOf="@+id/tilMiembrosEquipo" />
 
-  <MultiAutoCompleteTextView
-      android:id="@+id/multiAutoCompleteMiembrosEquipo"
-      android:layout_width="280dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="48dp"
-      android:hint="Miembros del equipo"
-      android:inputType="text"
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilFecha"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="354dp"
+      android:layout_height="67dp"
+      android:layout_marginTop="32dp"
+      android:hint="Fecha de vencimiento"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintHorizontal_bias="0.491"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/spinnerPrioridad" />
+      app:layout_constraintTop_toBottomOf="@+id/btnCargarArchivo">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTareaFechaVencimiento"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:clickable="true"
+        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+        android:focusable="false" />
+  </com.google.android.material.textfield.TextInputLayout>
 
   <Button
       android:id="@+id/btnAsignarTarea"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:text="Asignar Tarea"
+      android:layout_marginTop="20dp"
+      android:backgroundTint="@color/blue"
+      android:drawableEnd="@drawable/baseline_assignment_24"
+      android:text="Nueva Tarea"
+      android:textSize="15dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteMiembrosEquipo" />
+      app:layout_constraintTop_toBottomOf="@+id/tilFecha" />
 
-  <!--androidx.recyclerview.widget.RecyclerView
+  <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rvTareasAsignadas"
-      android:layout_width="413dp"
-      android:layout_height="82dp"
+      android:layout_width="396dp"
+      android:layout_height="113dp"
       android:layout_marginTop="16dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/btnAsignarTarea"
-      app:layout_constraintVertical_bias="0.651" /-->
+      app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

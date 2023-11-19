@@ -2,8 +2,16 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/green"
-    android:layout_height="wrap_content">
+    android:background="@color/bluesi"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/btnNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_menu_open_24"
+        android:paddingRight="30dp"
+        android:layout_gravity="start"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,5 +20,21 @@
         android:textSize="25dp"
         android:textColor="@color/white"
         android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/notificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_notifications_24"
+        android:layout_gravity="end"
+        android:layout_marginEnd="18dp"/>
+
+    <ImageView
+        android:id="@+id/buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_search_24"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"/>
 
 </androidx.appcompat.widget.Toolbar>

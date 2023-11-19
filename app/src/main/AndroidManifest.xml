@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +13,7 @@
         android:theme="@style/Theme.Tarea04"
         tools:targetApi="31">
         <activity
-            android:name=".MostrarDatosProyecto"
-            android:exported="false" />
-        <activity
-            android:name=".MostrarDatosCalendario"
-            android:exported="false" />
-        <activity
-            android:name=".MostrarDatosTarea"
+            android:name=".ActivityCompartirArchivos"
             android:exported="false" />
         <activity
             android:name=".ActivitySeguimientoProgresoTareas"
@@ -29,18 +23,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityCompartirArchivos"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityCalendarioReunion"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".ActivityAsignarTarea"
             android:exported="false" />
         <activity
-            android:name=".ActivityCrearProyectos"
+            android:name=".ActivityCalendarioReunion"
             android:exported="false" />
         <activity
             android:name=".ActivityRegistro"
@@ -48,6 +36,9 @@
         <activity
             android:name=".ActivityIniciarSesion"
             android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

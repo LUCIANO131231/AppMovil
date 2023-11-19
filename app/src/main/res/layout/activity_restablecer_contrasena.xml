@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/grey">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEmail"
+        android:id="@+id/tilEmail"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="84dp"
         android:hint="Ingrese su correo electrónico"
         app:hintEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/btRestablecerPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnRestablecerPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +27,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btRestablecerPassword"
+        android:id="@+id/btnRestablecerPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
-        android:text="Restablecer Contraseña"
+        android:text="Restablecer"
         android:textColor="@color/white"
         android:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"

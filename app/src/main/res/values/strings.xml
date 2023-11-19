@@ -1,24 +1,6 @@
 <resources>
     <string name="app_name">Espacio de trabajo</string>
-    <string name="nav_crear_proyectos">Crear Proyectos</string>
-    <string name="nav_asignar_tareas">Asignar Tareas</string>
-    <string name="nav_seguimiento">Seguimiento del Progreso</string>
-    <string name="nav_calendario_reuniones">Calendario Reuniones</string>
-    <string name="nav_compartir_archivos">Compartir Archivos</string>
 
-    <string-array name="prioridad_array">
-        <item>Alta</item>
-        <item>Media</item>
-        <item>Baja</item>
-    </string-array>
-
-    <string name="actualizar_progreso">Actualizar progreso</string>
-
-    <string-array name="estados_proyecto">
-        <item>En Progreso</item>
-        <item>Pendiente</item>
-        <item>Completado</item>
-        <item>Detenido</item>
-        <item>Cancelado</item>
-    </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

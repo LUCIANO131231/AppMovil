@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@color/bluesi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityIniciarSesion">
@@ -11,41 +11,24 @@
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="305dp"
-        android:layout_height="229dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="384dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/log"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvApp"
-        android:layout_width="251dp"
-        android:layout_height="60dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Proyecto U+"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="37dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEmail"
+        android:id="@+id/tilEmail"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="56dp"
         android:hint="Ingrese su correo electrónico"
         app:hintEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageLogo"
         app:startIconDrawable="@drawable/baseline_email_24">
@@ -57,17 +40,18 @@
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutPassword"
+        android:id="@+id/tilPassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:hint="Ingrese su contraseña"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
         app:startIconDrawable="@drawable/baseline_password_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -78,43 +62,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvRestablecerPassword"
+        android:id="@+id/tvRestablecer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="¿Olvidaste tu contraseña?"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
+        app:layout_constraintTop_toBottomOf="@id/tilPassword" />
 
     <Button
-        android:id="@+id/btLogin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:backgroundTint="@color/blue"
+        android:textSize="16dp"
         android:text="Iniciar sesión"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistrar"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
 
     <Button
-        android:id="@+id/btRegister"
+        android:id="@+id/btnRegistrar"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/blue"
         android:text="Registrarme"
+        android:textSize="17dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btLogin"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

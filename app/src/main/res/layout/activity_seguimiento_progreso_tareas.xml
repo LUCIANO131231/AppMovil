@@ -5,35 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey"
     tools:context=".ActivitySeguimientoProgresoTareas">
 
     <include
         android:id="@+id/toolbarSeguimiento"
-        layout="@layout/my_toolbar"/>
+        layout="@layout/nav_toolbar"/>
 
     <TextView
         android:id="@+id/tvTituloSeguimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seguimiento de Progreso de Tareas"
+        android:text="Seguimiento y avance de proyectos"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintVertical_bias="0.111" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSeguimientoTareas"
         android:layout_width="409dp"
-        android:layout_height="530dp"
+        android:layout_height="625dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloSeguimiento"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.078" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
